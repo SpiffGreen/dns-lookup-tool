@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNS Resolver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { body: '#fafcfd',
+      container: '#090c15', container1: '#293761', button: '#293761' }, } } }
+    </script>
+  </head>
+  <body class="bg-body font-[Roboto]">
+    <h1 class="text-center text-3xl my-10">DNS Resolver</h1>
+
+    <form action="/resolve-host" class="max-w-3xl mx-auto bg-container text-body rounded p-4">
+      <p class="text-2xl text-center">Enter hostname to dig</p>
+      <p class="text-center text-xs font-thin mt-2">Simply type and find out</p>
+      <div class="my-2 rounded px-2 py-1 bg-container1 mt-5 flex">
+        <input
+          type="text"
+          placeholder="Enter hostname..."
+          id="hostname"
+          name="hostname"
+          class="bg-transparent outline-none border-none grow"
+        />
+        <button
+          class="bg-container py-1.5 px-1.5 text-sm rounded"
+        >Submit</button>
+      </div>
+      <p class="text-xs text-center font-thin my-5">Made by
+        <a
+          href="https://github.com/spiffgreen"
+          class="text-blue-500 font-semibold"
+        >SpiffGreen</a></p>
+    </form>
+
+  </body>
+</html>
